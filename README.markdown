@@ -1,5 +1,7 @@
 A [Giter8][g8] template for writing a client for an HTTP API in Scala!
 
+[![Build Status](https://travis-ci.com/phdoerfler/httpclient.g8.svg?branch=master)](https://travis-ci.com/phdoerfler/httpclient.g8)
+
 Template license
 ----------------
 Written in 2020 by Philipp Dörfler
