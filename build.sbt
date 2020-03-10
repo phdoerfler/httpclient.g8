@@ -8,7 +8,6 @@ lazy val root = (project in file("."))
     test in Test := {
       val _ = (g8Test in Test).toTask("").value
     },
-    scriptedBufferLog := false,
     scriptedLaunchOpts ++= List("-Xms256m", "-Xmx256m", "-XX:ReservedCodeCacheSize=128m", "-Dfile.encoding=UTF-8"),
     resolvers += Resolver.url("typesafe", url("http://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
   )
