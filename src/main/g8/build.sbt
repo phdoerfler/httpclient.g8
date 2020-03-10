@@ -15,13 +15,16 @@ lazy val root = (project in file(".")).
       "com.softwaremill.sttp.client" %% "circe"                % "$sttp_version$",
       "io.circe"                     %% "circe-generic"        % "$circe_version$",
       "io.circe"                     %% "circe-generic-extras" % "$circe_extras_version$",
+
       "org.scala-lang.modules"       %% "scala-parallel-collections" % "$parallel_collections_version$",
       "com.github.pathikrit"         %% "better-files"               % "$better_files_version$",
       "com.github.scopt"             %% "scopt"                      % "$scopt_version$",
+      
       "org.fusesource.jansi"          % "jansi"       % "$jansi_version$",
       "jline"                         % "jline"       % "$jline_version$",
       "com.github.nscala-time"       %% "nscala-time" % "$nscala_time_version$"
-    )
+    ) ++ specs2("$specs2_version$", Seq("core", "html", "scalacheck")),
+    testOptions := Seq(Tests.Filter(s => s.endsWith("IndexSpec")))
   ).
   settings(specs2Settings).
   settings(graalVmSettings).
