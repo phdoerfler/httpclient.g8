@@ -5,6 +5,8 @@ ThisBuild / organizationName := "Philipp Dörfler"
 ThisBuild / crossPaths       := false
 ThisBuild / turbo            := true
 
+ThisBuild / scriptedBufferLog := false
+
 scalacOptions := Seq("-unchecked", "-deprecation", "-language:_", "-encoding", "UTF-8", "-target:jvm-1.8")
 
 lazy val root = (project in file(".")).
